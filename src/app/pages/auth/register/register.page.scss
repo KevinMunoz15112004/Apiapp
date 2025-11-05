@@ -1,0 +1,134 @@
+.register-container {
+    min-height: 100%;
+    height: auto;
+    position: relative;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: #1a1b41;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background:
+            radial-gradient(circle at 70% 20%, #6f2dbd 0%, transparent 30%),
+            radial-gradient(circle at 30% 70%, #a663cc 0%, transparent 30%);
+        opacity: 0.3;
+        z-index: 0;
+    }
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    z-index: 1;
+
+    .register-icon {
+        font-size: 70px;
+        color: #ffffff;
+        margin-bottom: 20px;
+        animation: bounce 2s ease-in-out infinite;
+    }
+
+    h1 {
+        font-size: 32px;
+        color: #ffffff;
+        margin: 0;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.auth-form {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    z-index: 1;
+}
+
+.form-item {
+    --background: rgba(255, 255, 255, 0.05);
+    --border-radius: 15px;
+    --padding-start: 20px;
+    --padding-end: 20px;
+    margin-bottom: 20px;
+
+    ion-label {
+        color: #E8E9FC !important;
+    }
+
+    ion-input {
+        color: #ffffff !important;
+        --padding-start: 10px;
+    }
+
+    &.item-has-focus {
+        --highlight-height: 2px;
+        --highlight-color-focused: #6f2dbd;
+    }
+}
+
+.register-button {
+    margin-top: 30px;
+    --background: linear-gradient(135deg, #6f2dbd 0%, #a663cc 100%);
+    --border-radius: 15px;
+    --padding-top: 20px;
+    --padding-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    &:hover {
+        --background: linear-gradient(135deg, #a663cc 0%, #6f2dbd 100%);
+    }
+}
+
+.login-link {
+    margin-top: 20px;
+    --color: #E8E9FC;
+    font-size: 14px;
+
+    &:hover {
+        --color: #ffffff;
+        text-decoration: underline;
+    }
+}
+
+ion-note {
+    color: #ff6b6b;
+    padding: 5px 0;
+    font-size: 12px;
+}
+
+ion-toolbar {
+     --background: linear-gradient(135deg, #6f2dbd 0%, #a663cc 50%, #6411ad 100%);
+}
+
+ion-toolbar {
+  ion-title {
+    color: #ffffff;
+  }
+}

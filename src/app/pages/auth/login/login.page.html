@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Iniciar Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="login-container">
+    <div class="logo-container">
+      <ion-icon name="rocket-outline" class="app-logo"></ion-icon>
+      <h1>ApiApp</h1>
+    </div>
+
+    <form [formGroup]="credentials" (ngSubmit)="login()" class="auth-form">
+      <ion-item class="form-item">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+        <ion-note slot="error" *ngIf="email?.touched && email?.errors?.['required']">
+          El email es requerido
+        </ion-note>
+        <ion-note slot="error" *ngIf="email?.touched && email?.errors?.['email']">
+          Por favor ingrese un email válido
+        </ion-note>
+      </ion-item>
+
+      <ion-item class="form-item">
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+        <ion-note slot="error" *ngIf="password?.touched && password?.errors?.['required']">
+          La contraseña es requerida
+        </ion-note>
+        <ion-note slot="error" *ngIf="password?.touched && password?.errors?.['minlength']">
+          La contraseña debe tener al menos 6 caracteres
+        </ion-note>
+      </ion-item>
+
+      <ion-button expand="block" type="submit" [disabled]="!credentials.valid" class="login-button">
+        Iniciar Sesión
+        <ion-icon slot="end" name="log-in-outline"></ion-icon>
+      </ion-button>
+
+      <div class="additional-options">
+        <ion-button fill="clear" (click)="forgotPassword()" class="forgot-password">
+          ¿Olvidaste tu contraseña?
+        </ion-button>
+
+        <ion-button fill="clear" routerLink="/register" class="register-link">
+          ¿No tienes cuenta? Regístrate
+          <ion-icon slot="end" name="person-add-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </form>
+  </div>
+</ion-content>

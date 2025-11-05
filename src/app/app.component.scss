@@ -8,3 +8,19 @@ ion-menu ion-title {
   font-weight: bold;
   letter-spacing: 1px;
 }
+
+.logout-button {
+  --background: #e53935;
+  --background-hover: #c62828;
+  --background-activated: #b71c1c;
+  --color: #ffffff;
+  margin: 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  justify-content: center;
+  text-align: center;
+
+  ion-icon {
+    margin-right: 8px;
+  }
+}

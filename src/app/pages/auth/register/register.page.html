@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/login" style="color: beige;"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="register-container">
+    <div class="logo-container">
+      <ion-icon name="person-add-outline" class="register-icon"></ion-icon>
+      <h1>Crear Cuenta</h1>
+    </div>
+
+    <form [formGroup]="credentials" (ngSubmit)="register()" class="auth-form">
+      <ion-item class="form-item">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+        <ion-note slot="error" *ngIf="email?.touched && email?.errors?.['required']">
+          El email es requerido
+        </ion-note>
+        <ion-note slot="error" *ngIf="email?.touched && email?.errors?.['email']">
+          Por favor ingrese un email válido
+        </ion-note>
+      </ion-item>
+
+      <ion-item class="form-item">
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+        <ion-note slot="error" *ngIf="password?.touched && password?.errors?.['required']">
+          La contraseña es requerida
+        </ion-note>
+        <ion-note slot="error" *ngIf="password?.touched && password?.errors?.['minlength']">
+          La contraseña debe tener al menos 6 caracteres
+        </ion-note>
+      </ion-item>
+
+      <ion-item class="form-item">
+        <ion-label position="floating">Confirmar Contraseña</ion-label>
+        <ion-input type="password" formControlName="confirmPassword"></ion-input>
+        <ion-note slot="error" *ngIf="confirmPassword?.touched && credentials.hasError('mismatch')">
+          Las contraseñas no coinciden
+        </ion-note>
+      </ion-item>
+
+      <ion-button expand="block" type="submit" [disabled]="!credentials.valid" class="register-button">
+        Registrarse
+        <ion-icon slot="end" name="checkmark-circle-outline"></ion-icon>
+      </ion-button>
+
+      <ion-button fill="clear" routerLink="/login" class="login-link">
+        ¿Ya tienes cuenta? Inicia sesión
+        <ion-icon slot="end" name="log-in-outline"></ion-icon>
+      </ion-button>
+    </form>
+  </div>
+</ion-content>
