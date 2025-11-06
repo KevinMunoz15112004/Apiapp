@@ -20,11 +20,9 @@
         </div>
       </div>
     </div>
-
-    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-      <ion-fab-button (click)="getNewJoke()">
-        <ion-icon name="refresh"></ion-icon>
-      </ion-fab-button>
-    </ion-fab>
+    
+     <ion-button shape= "round" expand="block" class="refresh-button" (click)="getNewJoke()">
+      <ion-icon slot="icon-only" name="refresh"></ion-icon>
+    </ion-button>
   </div>
 </ion-content>

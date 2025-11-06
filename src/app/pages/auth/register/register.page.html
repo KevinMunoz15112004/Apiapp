@@ -28,7 +28,7 @@
 
       <ion-item class="form-item">
         <ion-label position="floating">Contraseña</ion-label>
-        <ion-input type="password" formControlName="password"></ion-input>
+        <ion-input placeholder= "6 caracteres" type="password" formControlName="password"></ion-input>
         <ion-note slot="error" *ngIf="password?.touched && password?.errors?.['required']">
           La contraseña es requerida
         </ion-note>
