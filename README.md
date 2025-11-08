@@ -66,7 +66,7 @@ Y asi en la pagina **cats.page.html** se muestra gracias a esta logica donde se 
 
 ### Api Dogs
 
-En el archivo **dogs.page.ts** se define la interfaz que muestra imagenes de perror en la aplicación.
+En el archivo **dogs.page.ts** se define la interfaz que muestra imagenes de perros en la aplicación.
 
 Al igual que la API Cats, trabaja con la misma logica el API Dogs, donde se crea la variable DogImage y guarda la URL de la imagen, luego se usa la logica anterior para el metodo *ngOnInit* de la siguiente manera:
 
@@ -76,11 +76,21 @@ Y se muestra en dogs.page.html de la siguiente manera:
 
 <img width="320" height="187" alt="image" src="https://github.com/user-attachments/assets/7f93cff1-ff07-4d48-a499-a259b78cd825" />
 
+### Api Joke
 
+En el archivo **jokes.page.ts** se define la logica de la interfaz que muestra la respuesta de la api de chistes en la aplicación.
 
+Y nuevamente al igual que las API's anteriores, se trabaja con la misma logica para API joke donde la diferencia esta en la variable creada para guardar la informacion del chiste que llega desde la api y puede ser en texto o en un objeto con varias partes.
 
+<img width="81" height="34" alt="image" src="https://github.com/user-attachments/assets/51c91d0c-a53f-4b90-b691-4bc2ea8a82ad" />
 
+Usa el método getJoke() del ApiService para pedir un chiste aleatorio, cuando recibe la respuesta, la guarda en la variable joke.
 
+Y si ocurre un error (por ejemplo, si la API no responde), lo muestra en la consola.
+
+Luego en el archivo **jokes.page.html** pintamos la informacion de la variable de esta manera:
+
+<img width="417" height="249" alt="image" src="https://github.com/user-attachments/assets/fda7a98a-31ca-4ee2-b0ec-c64cf84b2786" />
 
 
 
