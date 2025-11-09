@@ -125,3 +125,5 @@ A continuacion se muestra en funcionamiento el apk en un dispositivo Android v13
 ![EvidenciaAPP](EvidenciaAPP.mp4)
 
 Tambien el link al video de TikTok:
+
+[TikTok Video](https://vm.tiktok.com/ZMAn3mFFb/)
