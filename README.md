@@ -92,6 +92,31 @@ Luego en el archivo **jokes.page.html** pintamos la informacion de la variable d
 
 <img width="417" height="249" alt="image" src="https://github.com/user-attachments/assets/fda7a98a-31ca-4ee2-b0ec-c64cf84b2786" />
 
+## 4) Despliegue
 
+Generamos la version optimizada de produccion de la app con el siguiente comando en la raiz del proyecto:
 
+*ionic build --prod*
+
+Esto crea una carpeta llamada **ww/** con todo el contenido estatico es decir HTML, CSS, JS
+
+Luego instalamos las herramoientas de Firebase con el comando:
+
+*npm install -g firebase-tools*
+
+Iniciamos el servicio con *firebase init* e iniciamos sesion, luego correctamente configurado con un proyecto existente en firebase desplegamos con el comando:
+
+*firebase deploy*
+
+Al finalizar, Firebase nos proporcionará una URL publica donde la app queda disponible online, por lo tanto aqui el link del proyecto desplegado:
+
+https://appapi-1c72a.web.app
+
+<img width="954" height="1024" alt="image" src="https://github.com/user-attachments/assets/da1e7aed-7756-4c81-a7c3-6277fa12b893" />
+
+## 5) Resultado
+
+A continuacion se muestra en funcionamiento el apk en un dispositivo Android v13
+
+![ApiAPK](ApiAPK.gif)
 
