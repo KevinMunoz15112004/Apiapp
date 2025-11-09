@@ -116,7 +116,8 @@ https://appapi-1c72a.web.app
 
 ## 5) Resultado
 
-A continuacion se muestra en funcionamiento el apk en un dispositivo Android v13
+A continuacion se muestra en funcionamiento el apk en un dispositivo Android v13 en video:
 
 ![EvidenciaAPP](EvidenciaAPP.mp4)
 
+Tambien el link al video de TikTok:
