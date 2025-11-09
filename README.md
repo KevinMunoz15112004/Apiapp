@@ -7,6 +7,10 @@ APK desarrollada con Ionic - Angular con la funcion de consumir distintas API's 
 -   Joshua Morocho
 -   Kevin Muñoz
 
+## Probar APK
+
+[API APK](android/app/build/outputs/apk/debug)
+
 ## 1) Login
 
 En el archivo **login.page.ts** se maneja la logica para loggear al usuario cuando este este registrado en la aplicación y tambien ofrece la opcion de recuperar la contraseña si la olvida, por lo tanto, dentro del codigo:
